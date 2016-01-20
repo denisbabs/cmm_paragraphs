@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Paragraphs feature.
+ */
+
+include_once 'cmm_paragraphs.features.inc';
