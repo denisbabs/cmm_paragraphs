@@ -23,10 +23,10 @@ function cmm_paragraphs_field_group_info() {
     'label' => 'Options',
     'weight' => '0',
     'children' => array(
-      0 => 'field_bg_image',
-      1 => 'field_classy_paragraphs',
-      2 => 'field_classy_margin',
-      3 => 'field_classy_padding',
+      0 => 'field_classy_paragraphs',
+      1 => 'field_classy_margin',
+      2 => 'field_classy_padding',
+      3 => 'field_par_bgimage',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -57,7 +57,8 @@ function cmm_paragraphs_field_group_info() {
     'children' => array(
       0 => 'field_bg_image',
       1 => 'field_classy_paragraphs',
-      2 => 'group_spacing',
+      2 => 'field_par_bgimage',
+      3 => 'group_spacing',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -84,7 +85,7 @@ function cmm_paragraphs_field_group_info() {
   $field_group->parent_name = 'group_options';
   $field_group->data = array(
     'label' => 'Spacing',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_classy_margin',
       1 => 'field_classy_padding',

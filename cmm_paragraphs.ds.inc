@@ -30,6 +30,11 @@ function cmm_paragraphs_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_par_bgimage' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['paragraphs_item|card|default'] = $ds_fieldsetting;
 
@@ -40,11 +45,10 @@ function cmm_paragraphs_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'heading';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'field_title' => array(
+    'field_par_title' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'lb-el' => 'h2',
           'fi' => TRUE,
           'fi-el' => 'h2',
           'fi-cl' => '',
@@ -143,15 +147,15 @@ function cmm_paragraphs_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_image',
-        1 => 'field_par_longtext',
-        2 => 'field_bg_image',
+        0 => 'field_par_bgimage',
+        1 => 'field_par_image',
+        2 => 'field_par_longtext',
       ),
     ),
     'fields' => array(
-      'field_image' => 'ds_content',
+      'field_par_bgimage' => 'ds_content',
+      'field_par_image' => 'ds_content',
       'field_par_longtext' => 'ds_content',
-      'field_bg_image' => 'ds_content',
     ),
     'classes' => array(
       'layout_class' => array(
@@ -213,11 +217,11 @@ function cmm_paragraphs_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_title',
+        0 => 'field_par_title',
       ),
     ),
     'fields' => array(
-      'field_title' => 'ds_content',
+      'field_par_title' => 'ds_content',
     ),
     'classes' => array(
       'layout_class' => array(
@@ -244,6 +248,16 @@ function cmm_paragraphs_ds_layout_settings_info() {
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_par_icon',
+        1 => 'field_par_link',
+      ),
+    ),
+    'fields' => array(
+      'field_par_icon' => 'ds_content',
+      'field_par_link' => 'ds_content',
+    ),
     'classes' => array(
       'layout_class' => array(
         '' => '',
@@ -254,20 +268,10 @@ function cmm_paragraphs_ds_layout_settings_info() {
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
     'layout_disable_css' => FALSE,
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_icon',
-        1 => 'field_link',
-      ),
-    ),
-    'fields' => array(
-      'field_icon' => 'ds_content',
-      'field_link' => 'ds_content',
-    ),
   );
   $export['paragraphs_item|link|default'] = $ds_layout;
 
@@ -281,13 +285,13 @@ function cmm_paragraphs_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_par_slide',
-        1 => 'field_bg_image',
+        0 => 'field_par_bgimage',
+        1 => 'field_par_slide',
       ),
     ),
     'fields' => array(
+      'field_par_bgimage' => 'ds_content',
       'field_par_slide' => 'ds_content',
-      'field_bg_image' => 'ds_content',
     ),
     'classes' => array(
       'layout_class' => array(
