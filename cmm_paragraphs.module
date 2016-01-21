@@ -5,12 +5,3 @@
  */
 
 include_once 'cmm_paragraphs.features.inc';
-
-/**
- * Implements hook_classy_paragraphs_list_options().
- */
-function cmm_paragraphs_classy_paragraphs_list_options($options, $field, $instance) {
-  $options['padding'] = t('Padding');
-  $options['inverse'] = t('Inverse');
-  return $options;
-}

@@ -10,109 +10,8 @@
 function cmm_paragraphs_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance:
-  // 'field_collection_item-eb_background-eb_selection'.
-  $field_instances['field_collection_item-eb_background-eb_selection'] = array(
-    'bundle' => 'eb_background',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'eb_selection',
-    'label' => 'Selection',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => -50,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'field_collection_item-eb_background-field_eb_image'.
-  $field_instances['field_collection_item-eb_background-field_eb_image'] = array(
-    'bundle' => 'eb_background',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_eb_image',
-    'label' => 'Image',
-    'required' => FALSE,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'image',
-      'settings' => array(
-        'bootstrap_carousel' => FALSE,
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 0,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'field_collection_item-eb_background-field_eb_image_style'.
-  $field_instances['field_collection_item-eb_background-field_eb_image_style'] = array(
-    'bundle' => 'eb_background',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_eb_image_style',
-    'label' => 'Style',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'paragraphs_item-card-field_image'.
-  $field_instances['paragraphs_item-card-field_image'] = array(
+  // Exported field_instance: 'paragraphs_item-card-field_par_image'.
+  $field_instances['paragraphs_item-card-field_par_image'] = array(
     'bundle' => 'card',
     'deleted' => 0,
     'description' => '',
@@ -123,22 +22,23 @@ function cmm_paragraphs_field_default_field_instances() {
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
         ),
         'type' => 'image',
         'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_image',
+    'field_name' => 'field_par_image',
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
@@ -172,12 +72,12 @@ function cmm_paragraphs_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-card-field_text'.
-  $field_instances['paragraphs_item-card-field_text'] = array(
+  // Exported field_instance: 'paragraphs_item-card-field_par_longtext'.
+  $field_instances['paragraphs_item-card-field_par_longtext'] = array(
     'bundle' => 'card',
     'default_value' => NULL,
     'deleted' => 0,
@@ -186,27 +86,25 @@ function cmm_paragraphs_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'plain_text',
-          ),
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 1,
       ),
     ),
+    'ds_extras_field_template' => 'theme_ds_field_minimal',
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_text',
+    'field_name' => 'field_par_longtext',
     'label' => 'Text',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 1,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -216,7 +114,7 @@ function cmm_paragraphs_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -231,21 +129,22 @@ function cmm_paragraphs_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'paragraphs',
         'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
         'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_card',
     'label' => 'Card',
@@ -255,18 +154,22 @@ function cmm_paragraphs_field_default_field_instances() {
       'allowed_bundles' => array(
         'card' => 'card',
         'card_group' => -1,
-        'slideshow' => -1,
+        'heading' => -1,
+        'image' => -1,
+        'link' => -1,
         'text' => -1,
       ),
       'bundle_weights' => array(
         'card' => 2,
         'card_group' => 3,
-        'slideshow' => 4,
+        'heading' => 10,
+        'image' => 11,
+        'link' => 12,
         'text' => 5,
       ),
-      'default_edit_mode' => 'open',
-      'title' => 'Paragraph',
-      'title_multiple' => 'Paragraphs',
+      'default_edit_mode' => 'preview',
+      'title' => 'Card',
+      'title_multiple' => 'Cards',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -278,37 +181,209 @@ function cmm_paragraphs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-text-eb_background'.
-  $field_instances['paragraphs_item-text-eb_background'] = array(
-    'bundle' => 'text',
+  // Exported field_instance: 'paragraphs_item-heading-field_title'.
+  $field_instances['paragraphs_item-heading-field_title'] = array(
+    'bundle' => 'heading',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_title',
+    'label' => 'Slide Title',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-link-field_icon'.
+  $field_instances['paragraphs_item-link-field_icon'] = array(
+    'bundle' => 'link',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'icon_field',
+        'settings' => array(
+          'link_to_content' => FALSE,
+        ),
+        'type' => 'icon_field_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_icon',
+    'label' => 'Icon',
+    'required' => 0,
+    'settings' => array(
+      'bundle' => NULL,
+      'icon' => NULL,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'icon_field',
+      'settings' => array(),
+      'type' => 'icon_field',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-link-field_link'.
+  $field_instances['paragraphs_item-link-field_link'] = array(
+    'bundle' => 'link',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
         'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'eb_background',
-    'label' => 'Background',
-    'required' => FALSE,
+    'field_name' => 'field_link',
+    'label' => 'Link',
+    'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-slide-field_par_slide'.
+  $field_instances['paragraphs_item-slide-field_par_slide'] = array(
+    'bundle' => 'slide',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => 'theme_field',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_par_slide',
+    'label' => 'Slide Content',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'button',
+      'allowed_bundles' => array(
+        'card' => -1,
+        'card_group' => -1,
+        'heading' => 'heading',
+        'image' => 'image',
+        'link' => 'link',
+        'slide' => -1,
+        'text' => 'text',
+      ),
+      'bundle_weights' => array(
+        'card' => -14,
+        'card_group' => -13,
+        'heading' => -12,
+        'image' => -10,
+        'link' => -9,
+        'slide' => -8,
+        'text' => -11,
+      ),
+      'default_edit_mode' => 'preview',
+      'title' => 'Slide Content',
+      'title_multiple' => 'Slide Content',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'module' => 'field_collection',
+      'active' => 0,
+      'module' => 'paragraphs',
       'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 3,
+      'type' => 'paragraphs_embed',
+      'weight' => 2,
     ),
   );
 
@@ -348,8 +423,8 @@ function cmm_paragraphs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-text-field_text'.
-  $field_instances['paragraphs_item-text-field_text'] = array(
+  // Exported field_instance: 'paragraphs_item-text-field_par_longtext'.
+  $field_instances['paragraphs_item-text-field_par_longtext'] = array(
     'bundle' => 'text',
     'default_value' => NULL,
     'deleted' => 0,
@@ -358,11 +433,7 @@ function cmm_paragraphs_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'plain_text',
-          ),
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 0,
       ),
@@ -374,7 +445,7 @@ function cmm_paragraphs_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_text',
+    'field_name' => 'field_par_longtext',
     'label' => 'Text',
     'required' => 0,
     'settings' => array(
@@ -394,12 +465,13 @@ function cmm_paragraphs_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Background');
   t('Card');
+  t('Icon');
   t('Image');
+  t('Link');
   t('Options');
-  t('Selection');
-  t('Style');
+  t('Slide Content');
+  t('Slide Title');
   t('Text');
 
   return $field_instances;
