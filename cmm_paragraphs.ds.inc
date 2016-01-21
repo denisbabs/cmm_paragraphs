@@ -282,10 +282,12 @@ function cmm_paragraphs_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_par_slide',
+        1 => 'field_bg_image',
       ),
     ),
     'fields' => array(
       'field_par_slide' => 'ds_content',
+      'field_bg_image' => 'ds_content',
     ),
     'classes' => array(
       'layout_class' => array(

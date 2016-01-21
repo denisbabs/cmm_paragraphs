@@ -394,6 +394,81 @@ function cmm_paragraphs_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-slide-field_bg_image'.
+  $field_instances['paragraphs_item-slide-field_bg_image'] = array(
+    'bundle' => 'slide',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'bg_image_formatter',
+        'settings' => array(
+          'css_settings' => array(
+            'bg_image_attachment' => 'scroll',
+            'bg_image_background_size' => 'cover',
+            'bg_image_background_size_ie8' => 1,
+            'bg_image_color' => '#FFFFFF',
+            'bg_image_important' => 1,
+            'bg_image_media_query' => 'all',
+            'bg_image_repeat' => 'no-repeat',
+            'bg_image_selector' => '.paragraphs-item-[paragraphs_item:item-id]',
+            'bg_image_x' => 'left',
+            'bg_image_y' => 'top',
+          ),
+          'image_style' => '',
+          'multiple' => 0,
+        ),
+        'type' => 'bg_image_formatter',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_bg_image',
+    'label' => 'Background Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'media',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-slide-field_par_slide'.
   $field_instances['paragraphs_item-slide-field_par_slide'] = array(
     'bundle' => 'slide',

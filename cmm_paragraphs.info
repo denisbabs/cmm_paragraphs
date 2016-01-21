@@ -1,6 +1,7 @@
 name = Paragraphs
 core = 7.x
 package = CMM CMS
+dependencies[] = aet
 dependencies[] = bg_image
 dependencies[] = bg_image_formatter
 dependencies[] = bg_image_ui
@@ -45,6 +46,7 @@ features[field_instance][] = paragraphs_item-card_group-field_card
 features[field_instance][] = paragraphs_item-heading-field_title
 features[field_instance][] = paragraphs_item-link-field_icon
 features[field_instance][] = paragraphs_item-link-field_link
+features[field_instance][] = paragraphs_item-slide-field_bg_image
 features[field_instance][] = paragraphs_item-slide-field_par_slide
 features[field_instance][] = paragraphs_item-text-field_classy_paragraphs
 features[field_instance][] = paragraphs_item-text-field_par_longtext
