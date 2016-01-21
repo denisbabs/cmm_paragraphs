@@ -5,3 +5,37 @@
  */
 
 include_once 'cmm_paragraphs.features.inc';
+
+/**
+ * Implements hook_classy_paragraphs_list_options().
+ */
+function cmm_paragraphs_classy_paragraphs_list_options($options, $field, $instance) {
+
+  if($field['field_name'] == 'field_classy_margin') {
+    $options['m-a-1'] = t('Margin x 1');
+    $options['m-y-1'] = t('Margin Vertical x 1');
+    $options['m-x-1'] = t('Margin Horizontal x 1');
+    $options['m-a-2'] = t('Margin x 2');
+    $options['m-y-2'] = t('Margin Vertical x 2');
+    $options['m-x-2'] = t('Margin Horizontal x 2');
+    $options['m-a-3'] = t('Margin x 3');
+    $options['m-y-3'] = t('Margin Vertical x 3');
+    $options['m-x-3'] = t('Margin Horizontal x 3');
+  }
+  if($field['field_name'] == 'field_classy_padding') {
+    $options['p-a-1'] = t('Padding x 1');
+    $options['p-y-1'] = t('Padding Vertical x 1');
+    $options['p-x-1'] = t('Padding Horizontal x 1');
+    $options['p-a-2'] = t('Padding x 2');
+    $options['p-y-2'] = t('Padding Vertical x 2');
+    $options['p-x-2'] = t('Padding Horizontal x 2');
+    $options['p-a-3'] = t('Padding x 3');
+    $options['p-y-3'] = t('Padding Vertical x 3');
+    $options['p-x-3'] = t('Padding Horizontal x 3');
+  }
+  if($field['field_name'] == 'field_classy_paragraphs') {
+    $options['inverse'] = t('Inverse Text Color');
+    $options['title-center'] = t('Center Title');
+  }
+  return $options;
+}

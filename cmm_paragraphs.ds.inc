@@ -73,7 +73,7 @@ function cmm_paragraphs_ds_layout_settings_info() {
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'card_group';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'ds_reset';
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
@@ -85,7 +85,7 @@ function cmm_paragraphs_ds_layout_settings_info() {
     ),
     'classes' => array(
       'layout_class' => array(
-        'card-group' => 'card-group',
+        '' => '',
       ),
     ),
     'wrappers' => array(
@@ -161,7 +161,7 @@ function cmm_paragraphs_ds_layout_settings_info() {
     'wrappers' => array(
       'ds_content' => 'article',
     ),
-    'layout_wrapper' => 'div',
+    'layout_wrapper' => 'figure',
     'layout_attributes' => '',
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
@@ -291,7 +291,7 @@ function cmm_paragraphs_ds_layout_settings_info() {
     ),
     'classes' => array(
       'layout_class' => array(
-        'row' => 'row',
+        'card-block' => 'card-block',
       ),
     ),
     'wrappers' => array(

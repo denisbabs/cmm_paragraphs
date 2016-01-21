@@ -25,6 +25,50 @@ function cmm_paragraphs_field_default_field_bases() {
     'type' => 'paragraphs',
   );
 
+  // Exported field_base: 'field_classy_margin'.
+  $field_bases['field_classy_margin'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_classy_margin',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'classy_paragraphs',
+    'settings' => array(
+      'allowed_values' => array(),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'cp_list',
+  );
+
+  // Exported field_base: 'field_classy_padding'.
+  $field_bases['field_classy_padding'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_classy_padding',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'classy_paragraphs',
+    'settings' => array(
+      'allowed_values' => array(),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'cp_list',
+  );
+
   // Exported field_base: 'field_classy_paragraphs'.
   $field_bases['field_classy_paragraphs'] = array(
     'active' => 1,
